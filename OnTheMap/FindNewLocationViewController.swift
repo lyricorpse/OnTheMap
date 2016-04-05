@@ -1,5 +1,5 @@
 //
-//  PutNewPinViewController.swift
+//  FindNewLocationViewController.swift
 //  OnTheMap
 //
 //  Created by Feng Zhu on 4/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PutNewPinViewController: UIViewController, UITextFieldDelegate {
+class FindNewLocationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var findOnTheMapButton: UIButton!
     @IBOutlet weak var enterLocationTextField: UITextField!
@@ -28,17 +28,18 @@ class PutNewPinViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(true)
 
         isFirstEdit = true
-        UIconfig()
+        UIConfig()
     }
     
-    func UIconfig() {
+    func UIConfig() {
         // button round corner
         findOnTheMapButton.layer.cornerRadius = 10.0
         findOnTheMapButton.clipsToBounds = true
         
         // textfield
         let locationTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.whiteColor()
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name:"Helvetica Neue", size: 22)!
         ]
         enterLocationTextField.defaultTextAttributes = locationTextAttributes
         

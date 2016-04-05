@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="891" y="-303"/>
         </scene>
-        <!--Put New Pin View Controller-->
+        <!--Find New Location View Controller-->
         <scene sceneID="bkJ-Al-XoF">
             <objects>
-                <viewController id="wDU-bW-dGG" customClass="PutNewPinViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wDU-bW-dGG" customClass="FindNewLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wjd-h4-kKf"/>
                         <viewControllerLayoutGuide type="bottom" id="Vip-Cp-Mgh"/>
@@ -131,6 +131,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="0.0" green="0.4010614153" blue="0.59278877620000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Find on the Map"/>
+                                <connections>
+                                    <segue destination="HD9-Qw-xjl" kind="show" id="RZo-BT-vXZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhy-ZZ-b9K">
                                 <rect key="frame" x="265" y="130" width="70" height="30"/>
@@ -138,12 +141,12 @@
                                 <color key="textColor" red="0.0" green="0.30084103130000001" blue="0.44465804980000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="fill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwS-LA-hYi" customClass="TextField" customModule="OnTheMap" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="fill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwS-LA-hYi" customClass="LocationTextField" customModule="OnTheMap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="180" width="600" height="304"/>
                                 <color key="backgroundColor" red="0.25601981963700432" green="0.56581645298062433" blue="0.84685863874345546" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -175,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="1622" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--Submit New Location View Controller-->
         <scene sceneID="VfT-4e-HOH">
             <objects>
-                <viewController id="HD9-Qw-xjl" sceneMemberID="viewController">
+                <viewController id="HD9-Qw-xjl" customClass="SubmitNewLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BbM-68-JzQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Wjf-Fg-EGU"/>
@@ -186,8 +189,62 @@
                     <view key="view" contentMode="scaleToFill" id="3e6-V1-Afv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-DQ-o00">
+                                <rect key="frame" x="542" y="25" width="48" height="30"/>
+                                <color key="tintColor" red="0.0" green="0.4010614153" blue="0.59278877620000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.30084103130000001" blue="0.44465804980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="wDU-bW-dGG" eventType="touchUpInside" id="G0P-Xb-QY2"/>
+                                    <action selector="cancelButton:" destination="HD9-Qw-xjl" eventType="touchUpInside" id="cM7-xJ-Tqj"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wz8-UJ-1LB">
+                                <rect key="frame" x="0.0" y="200" width="600" height="400"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCt-FR-hoY">
+                                <rect key="frame" x="250" y="524" width="100" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="03h-V7-1be"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.0" green="0.4010614153" blue="0.59278877620000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="fill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPI-pU-2ky" customClass="LinkTextField" customModule="OnTheMap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="600" height="150"/>
+                                <color key="backgroundColor" red="0.25601981959999998" green="0.56581645300000005" blue="0.8468586387" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="qMg-rY-fWX"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25601981959999998" green="0.56581645300000005" blue="0.8468586387" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wz8-UJ-1LB" firstAttribute="leading" secondItem="3e6-V1-Afv" secondAttribute="leading" id="07w-VC-w5l"/>
+                            <constraint firstItem="Wjf-Fg-EGU" firstAttribute="top" secondItem="wz8-UJ-1LB" secondAttribute="bottom" id="2Uh-OM-7Ud"/>
+                            <constraint firstItem="TCt-FR-hoY" firstAttribute="centerX" secondItem="3e6-V1-Afv" secondAttribute="centerX" id="6m9-hy-0tt"/>
+                            <constraint firstItem="aPI-pU-2ky" firstAttribute="top" secondItem="3e6-V1-Afv" secondAttribute="top" constant="50" id="7T1-jL-1Z8"/>
+                            <constraint firstAttribute="trailing" secondItem="aPI-pU-2ky" secondAttribute="trailing" id="DnZ-ej-3t6"/>
+                            <constraint firstAttribute="trailing" secondItem="wz8-UJ-1LB" secondAttribute="trailing" id="JG6-au-KQu"/>
+                            <constraint firstItem="V9n-DQ-o00" firstAttribute="top" secondItem="BbM-68-JzQ" secondAttribute="bottom" constant="5" id="YN4-yi-r25"/>
+                            <constraint firstItem="Wjf-Fg-EGU" firstAttribute="top" secondItem="TCt-FR-hoY" secondAttribute="bottom" constant="40" id="ieN-gI-iTx"/>
+                            <constraint firstItem="aPI-pU-2ky" firstAttribute="leading" secondItem="3e6-V1-Afv" secondAttribute="leading" id="kOX-Wz-CU5"/>
+                            <constraint firstAttribute="trailing" secondItem="V9n-DQ-o00" secondAttribute="trailing" constant="10" id="m9e-N2-Web"/>
+                            <constraint firstItem="wz8-UJ-1LB" firstAttribute="top" secondItem="aPI-pU-2ky" secondAttribute="bottom" id="zOm-YD-Nht"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="linkInputTextField" destination="aPI-pU-2ky" id="am0-ba-Utr"/>
+                        <outlet property="submitButton" destination="TCt-FR-hoY" id="29B-z4-7PZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qS9-tu-OL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

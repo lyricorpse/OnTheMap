@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8E2836B1CB421E700DAE9FF /* PutNewPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2836A1CB421E700DAE9FF /* PutNewPinViewController.swift */; };
-		B8E283711CB433D600DAE9FF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E283701CB433D600DAE9FF /* Model.swift */; };
+		B8B586131CB463CA00482105 /* SubmitNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */; };
+		B8E2836B1CB421E700DAE9FF /* FindNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */; };
+		B8E283711CB433D600DAE9FF /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E283701CB433D600DAE9FF /* Style.swift */; };
 		B8FE46D81CAB56FB008AF563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE46D71CAB56FB008AF563 /* AppDelegate.swift */; };
 		B8FE46DA1CAB56FB008AF563 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE46D91CAB56FB008AF563 /* MapViewController.swift */; };
 		B8FE46DD1CAB56FB008AF563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FE46DB1CAB56FB008AF563 /* Main.storyboard */; };
@@ -18,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8E2836A1CB421E700DAE9FF /* PutNewPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PutNewPinViewController.swift; sourceTree = "<group>"; };
-		B8E283701CB433D600DAE9FF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitNewLocationViewController.swift; sourceTree = "<group>"; };
+		B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNewLocationViewController.swift; sourceTree = "<group>"; };
+		B8E283701CB433D600DAE9FF /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B8FE46D41CAB56FB008AF563 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FE46D71CAB56FB008AF563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8FE46D91CAB56FB008AF563 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -62,12 +64,13 @@
 			children = (
 				B8FE46E01CAB56FB008AF563 /* LaunchScreen.storyboard */,
 				B8FE46DB1CAB56FB008AF563 /* Main.storyboard */,
-				B8E2836A1CB421E700DAE9FF /* PutNewPinViewController.swift */,
 				B8FE46DE1CAB56FB008AF563 /* Assets.xcassets */,
 				B8FE46D71CAB56FB008AF563 /* AppDelegate.swift */,
+				B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */,
+				B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */,
 				B8FE46D91CAB56FB008AF563 /* MapViewController.swift */,
 				B8FE46E91CAB5E90008AF563 /* TableViewController.swift */,
-				B8E283701CB433D600DAE9FF /* Model.swift */,
+				B8E283701CB433D600DAE9FF /* Style.swift */,
 				B8FE46E31CAB56FB008AF563 /* Info.plist */,
 			);
 			path = OnTheMap;
@@ -145,9 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B586131CB463CA00482105 /* SubmitNewLocationViewController.swift in Sources */,
 				B8FE46DA1CAB56FB008AF563 /* MapViewController.swift in Sources */,
-				B8E283711CB433D600DAE9FF /* Model.swift in Sources */,
-				B8E2836B1CB421E700DAE9FF /* PutNewPinViewController.swift in Sources */,
+				B8E283711CB433D600DAE9FF /* Style.swift in Sources */,
+				B8E2836B1CB421E700DAE9FF /* FindNewLocationViewController.swift in Sources */,
 				B8FE46EA1CAB5E90008AF563 /* TableViewController.swift in Sources */,
 				B8FE46D81CAB56FB008AF563 /* AppDelegate.swift in Sources */,
 			);
