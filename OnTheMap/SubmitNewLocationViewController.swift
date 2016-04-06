@@ -14,8 +14,18 @@ class SubmitNewLocationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var linkInputTextField: UITextField!
     
+    var isEditted: Bool!
+    
     @IBAction func cancelButton(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func submitLocation(sender: UIButton) {
+        if isEditted! {
+            print("Submitting the new location \(linkInputTextField.text)...")
+        } else {
+            print("Must Enter a Link")
+        }
     }
     
     var isFirstEdit: Bool!
@@ -23,13 +33,15 @@ class SubmitNewLocationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        isEditted = false
+        UIConfig()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
         isFirstEdit = true
-        UIConfig()
     }
 
     func UIConfig() {
@@ -59,6 +71,7 @@ class SubmitNewLocationViewController: UIViewController, UITextFieldDelegate {
             isFirstEdit = false
         }
         linkInputTextField.textAlignment = .Left
+        isEditted = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

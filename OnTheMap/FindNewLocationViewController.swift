@@ -14,21 +14,31 @@ class FindNewLocationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var enterLocationTextField: UITextField!
     
     var isFirstEdit: Bool!
+    var isEditted: Bool!
     
     @IBAction func cancelButton(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func findLocation(sender: UIButton) {
+        if isEditted! {
+            print("Finding the location: \(enterLocationTextField.text)...")
+        } else {
+            print("Must Enter a Location.")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        isEditted = false
+        UIConfig()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
 
         isFirstEdit = true
-        UIConfig()
     }
     
     func UIConfig() {
@@ -57,6 +67,7 @@ class FindNewLocationViewController: UIViewController, UITextFieldDelegate {
             isFirstEdit = false
         }
         enterLocationTextField.textAlignment = .Left
+        isEditted = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

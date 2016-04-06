@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8714B411CB4742A00CE6BAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8714B401CB4742A00CE6BAE /* LoginViewController.swift */; };
 		B8B586131CB463CA00482105 /* SubmitNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */; };
 		B8E2836B1CB421E700DAE9FF /* FindNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */; };
 		B8E283711CB433D600DAE9FF /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E283701CB433D600DAE9FF /* Style.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8714B401CB4742A00CE6BAE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitNewLocationViewController.swift; sourceTree = "<group>"; };
 		B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNewLocationViewController.swift; sourceTree = "<group>"; };
 		B8E283701CB433D600DAE9FF /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				B8FE46DB1CAB56FB008AF563 /* Main.storyboard */,
 				B8FE46DE1CAB56FB008AF563 /* Assets.xcassets */,
 				B8FE46D71CAB56FB008AF563 /* AppDelegate.swift */,
+				B8714B401CB4742A00CE6BAE /* LoginViewController.swift */,
 				B8E2836A1CB421E700DAE9FF /* FindNewLocationViewController.swift */,
 				B8B586121CB463CA00482105 /* SubmitNewLocationViewController.swift */,
 				B8FE46D91CAB56FB008AF563 /* MapViewController.swift */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8714B411CB4742A00CE6BAE /* LoginViewController.swift in Sources */,
 				B8B586131CB463CA00482105 /* SubmitNewLocationViewController.swift in Sources */,
 				B8FE46DA1CAB56FB008AF563 /* MapViewController.swift in Sources */,
 				B8E283711CB433D600DAE9FF /* Style.swift in Sources */,

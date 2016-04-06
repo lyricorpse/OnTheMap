@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    @IBAction func logout(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func refresh(sender: UIBarButtonItem) {
         print("refresh data")
     }
