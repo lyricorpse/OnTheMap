@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    @IBAction func unwindToRoot(segue: UIStoryboardSegue) {
+        print("successfully unwound")
+    }
+    
     @IBAction func logout(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }

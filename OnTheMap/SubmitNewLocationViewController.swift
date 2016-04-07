@@ -16,15 +16,14 @@ class SubmitNewLocationViewController: UIViewController, UITextFieldDelegate {
     
     var isEditted: Bool!
     
-    @IBAction func cancelButton(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     @IBAction func submitLocation(sender: UIButton) {
         if isEditted! {
             print("Submitting the new location \(linkInputTextField.text)...")
         } else {
-            print("Must Enter a Link")
+            // alert
+            let alertController = UIAlertController(title: "", message: "Must Enter a Link", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     

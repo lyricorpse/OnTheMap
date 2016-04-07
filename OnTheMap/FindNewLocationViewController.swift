@@ -16,15 +16,14 @@ class FindNewLocationViewController: UIViewController, UITextFieldDelegate {
     var isFirstEdit: Bool!
     var isEditted: Bool!
     
-    @IBAction func cancelButton(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     @IBAction func findLocation(sender: UIButton) {
         if isEditted! {
             print("Finding the location: \(enterLocationTextField.text)...")
         } else {
-            print("Must Enter a Location.")
+            // alert
+            let alertController = UIAlertController(title: "", message: "Must Enter a Location.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     
@@ -37,7 +36,7 @@ class FindNewLocationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-
+        
         isFirstEdit = true
     }
     

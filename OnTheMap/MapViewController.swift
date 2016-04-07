@@ -16,6 +16,10 @@ class MapViewController: UIViewController, UINavigationControllerDelegate, MKMap
         print("refresh data")
     }
     
+    @IBAction func unwindToRoot(segue: UIStoryboardSegue) {
+        print("successfully unwound")
+    }
+    
     @IBAction func logout(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
